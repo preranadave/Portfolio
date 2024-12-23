@@ -39,7 +39,7 @@ const NewLandigUI = () => {
             </div>
 
             <div className="flex  items-start">
-              <div className="relative rounded-md overflow-hidden left-0 md:top-6 top-3">
+              <div className="relative rounded-md overflow-hidden left-0 md:top-6 top-[0.5rem]">
                 {" "}
                 <motion.img
                   initial={{ x: "-120%", opacity: 0 }}
@@ -71,7 +71,7 @@ const NewLandigUI = () => {
               >
                 Developer
               </motion.p>
-              <div className="overflow-hidden md:w-[23vw] md:h-[4vw] w-[18vw] h-[8vw] relative md:top-0 top-1 left-4 md:left-8 rounded-md">
+              <div className="overflow-hidden md:w-[23vw] md:h-[4vw] w-[18vw] h-[8vw] relative md:top-0 top-1 sm:top-0 left-4 md:left-8 rounded-md">
                 <motion.div
                   initial={{ y: "-100%", opacity: 0 }}
                   animate={{ y: "0", opacity: 1 }}

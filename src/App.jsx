@@ -6,7 +6,7 @@ import SkillMarquee from "./Components/Skill/SkillMarquee";
 import { motion } from "framer-motion";
 import About from "./Components/About/About";
 import Projects from "./Components/Project/Projects";
-import Footer from "./Components/Footer";
+import Footer from "./Components/Footer/Footer";
 import gsap from "gsap";
 import NewAboutUI from "./Components/About/NewAboutUI";
 import NewLandigUI from "./Components/LandingPage/NewLandigUI";
@@ -66,7 +66,7 @@ function App() {
         animate="default"
         transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.8 }}
         id="minicircle"
-        className={`w-20 h-20 rounded-full pointer-events-none backdrop-invert mix-blend-difference absolute top-0 right-0 z-[9999]`}
+        className={`md:w-20 md:h-20 rounded-full pointer-events-none backdrop-invert mix-blend-difference absolute top-0 right-0 z-[9999]`}
       ></motion.div>
       <Navbar></Navbar>
       <NewLandigUI></NewLandigUI>

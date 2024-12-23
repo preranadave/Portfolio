@@ -1,7 +1,7 @@
 import React from "react";
-import ContactForm from "./Contact/ContactForm";
+import ContactForm from "../Contact/ContactForm";
 import { motion } from "framer-motion";
-import hand from "../assets/images/tumblr_mr2w11PxSc1rmzrqmo1_500.webp";
+import hand from "../../assets/images/tumblr_mr2w11PxSc1rmzrqmo1_500.webp";
 
 function Footer() {
   return (
@@ -14,7 +14,7 @@ function Footer() {
         whileInView={{ y: "0",opacity:1 }}
         transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
         src={hand}
-        className="md:h-28 h-14 rounded-md absolute md:left-[28vw] md:top-[6vw] left-[54vw] top-[18vw]"
+        className="md:h-28 h-[3.3rem] rounded-md absolute md:left-[28vw] md:top-[6vw] left-[14rem] top-[18vw]"
       />
 
       <div
