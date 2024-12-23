@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *
+{
+    cursor: none;
+} */
+*::-webkit-scrollbar{
+    display: none;
+    scroll-behavior: smooth;
+}
+.shape
+{
+    background: linear-gradient(rgb(0, 194, 238) 0%, rgb(238, 143, 0) 90%,#e80000 100%);
+    border-radius: 25rem 25rem 0 0;
+    opacity: 0.7;
+}
