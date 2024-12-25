@@ -61,7 +61,7 @@ const NewProjectUI = (props) => {
     });
   };
   return (
-    <div>
+    <div >
       <motion.div
         initial={{ opacity: 0, backgroundColor: "#0B192C" }}
         whileInView={{ opacity: 1, backgroundColor: "#171717" }}
@@ -105,16 +105,22 @@ const NewProjectUI = (props) => {
 
             <motion.button
               initial={{ scale: 1 }}
-              whileHover={{ scale: 1.5 }}
+              whileHover={{ scale: 1.02 }}
               transition={{ ease: [0.83, 0, 0.17, 1], duration: 0.8 }}
-              className="resume font-['Founders Grotesk']  uppercase font-medium leading-none  md:text-[12px] text-[2vw] px-2 py-2 rounded-3xl border-[1px] border-[#F1F1F1] w-36 text-center"
+              className="relative overflow-hidden group font-['Founders Grotesk']  uppercase font-medium leading-none  md:text-[12px] text-[2vw] px-2 py-4 rounded-3xl border-[1px] border-[#F1F1F1] w-36 text-center"
             >
               <a
                 href={props.URL}
                 target="blank"
                 className="text-center font-['Neue Montreal'] "
               >
-                Github
+                <span className="absolute inset-0 flex items-center justify-center transform transition-transform duration-300 group-hover:-translate-y-full">
+                  GitHub
+                </span>
+                {/* Second Text */}
+                <span className="absolute inset-0 flex items-center justify-center transform translate-y-full transition-transform duration-300 group-hover:translate-y-0">
+                  GitHub
+                </span>
               </a>
             </motion.button>
           </div>

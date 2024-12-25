@@ -97,7 +97,7 @@ function SkillMarquee() {
         >
           <motion.div
             initial={{ x: "0" }}
-            animate={{ x: "-100%" }}
+            whileInView={{ x: "-100%" }}
             transition={{ ease: "linear", repeat: Infinity, duration: 20 }}
             className="flex "
           >

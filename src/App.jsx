@@ -12,7 +12,7 @@ import NewAboutUI from "./Components/About/NewAboutUI";
 import NewLandigUI from "./Components/LandingPage/NewLandigUI";
 function App() {
   const [MousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
+  const [ShowWhiteMousePointer, setShowWhiteMousePointer] = useState(true);
   const [MouseSkew, setMouseSkew] = useState({
     xscale: 1,
     yscale: 1,
@@ -24,7 +24,7 @@ function App() {
   var TimeOut;
   const CircleMouseFollow = (e) => {
     setMousePosition({
-      x: e.pageX - 1492,
+      x: e.clientX - 35,
       y: e.pageY - 35,
     });
   };
@@ -50,8 +50,8 @@ function App() {
   const ScrollFollow = (e) => {
     // console.log(e);
     setMousePosition({
-      x: e.pageX - 1480,
-      y: e.pageY - 10,
+      x: e.clientX - 35,
+      y: e.pageY - 35,
     });
   };
 
@@ -61,15 +61,22 @@ function App() {
       onMouseMove={CircleMouseFollow}
       onWheel={ScrollFollow}
     >
-      <motion.div
-        variants={variants}
-        animate="default"
-        transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.8 }}
-        id="minicircle"
-        className={`md:w-20 md:h-20 rounded-full pointer-events-none backdrop-invert mix-blend-difference absolute top-0 right-0 z-[9999]`}
-      ></motion.div>
+      {ShowWhiteMousePointer && (
+        <motion.div
+          variants={variants}
+          animate="default"
+          transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.8 }}
+          id="minicircle"
+          style={{
+            transform: `translate(${MousePosition.x}px, ${MousePosition.y}px)`,
+            transition: "all 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
+          }}
+          className={`md:w-20 md:h-20 rounded-full pointer-events-none backdrop-invert mix-blend-difference absolute  z-[9999]`}
+        ></motion.div>
+      )}
+
       <Navbar></Navbar>
-      <NewLandigUI></NewLandigUI>
+      <NewLandigUI showMousePointer={setShowWhiteMousePointer}></NewLandigUI>
       <SkillMarquee></SkillMarquee>
       <NewAboutUI></NewAboutUI>
       <Projects></Projects>

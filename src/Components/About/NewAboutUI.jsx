@@ -40,7 +40,6 @@ const NewAboutUI = () => {
     <div className="h-fit" >
       <div className="md:flex flex-col ">
         <motion.h1
-        data-scroll data-scroll-section data-scroll-speed="1"
           initial={{ opacity: 0, x: "-100%" }}
           whileInView={{ opacity: 1, x: "0" }}
           transition={{ duration: 1 }}
