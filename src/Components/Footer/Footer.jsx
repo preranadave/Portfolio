@@ -24,7 +24,7 @@ function Footer() {
 
       >
         <div className="md:flex-col md:items-start items-center h-full">
-          <div className="overflow-y-hidden md:w-[25vw]">
+          <div className="overflow-y-hidden md:w-[25vw] px-1">
             <motion.h1
               initial={{ y: "-99%" }}
               whileInView={{ y: "0" }}

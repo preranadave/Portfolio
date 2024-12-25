@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import headerVideo from "../../assets/images/5680034-hd_1920_1080_24fps.mp4";
+import headerVideo from "../../assets/images/about2.mp4";
 
 import simpsonwebsite from "../../assets/images/giphy(1).webp";
 import resume from "../../assets/files/Prerana DaveUiDeveloperResume.pdf";
@@ -16,7 +16,7 @@ const NewLandigUI = (props) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const elementRef = useRef(null);
   const imageRef = useRef(null);
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
   const handleMouseMove = (e) => {
     props.showMousePointer(false);
@@ -24,7 +24,7 @@ const NewLandigUI = (props) => {
     const mouseX = e.pageX - rect.left;
     const mouseY = e.clientY - rect.top;
 
-    setMousePosition({ x: mouseX-5, y: mouseY -50});
+    setMousePosition({ x: mouseX - 5, y: mouseY - 50 });
   };
 
   const handleMouseEnter = (e) => {
@@ -60,12 +60,11 @@ const NewLandigUI = (props) => {
         <div className="shape absolute md:w-[25rem] w-[10rem] rotate-[80deg] md:h-[25rem] h-[10rem] rounded-2xl md:bottom-20 bottom-[100vw] left-0"></div>
         <section className="backdrop-blur-3xl md:w-full h-screen flex flex-col md:justify-center justify-start   items-center leading-none ">
           <div className="px-5 relative md:top-0 top-24">
-            <div className="flex items-center">
+            <div className="flex items-center gap-2">
               <div
                 className={`absolute z-[888] pointer-events-none ${
                   isHovered ? "opacity-100" : "opacity-0"
                 }`}
-              
                 style={{
                   transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
                   transition: "all 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
@@ -75,26 +74,30 @@ const NewLandigUI = (props) => {
                   View Github
                 </button>
               </div>
-              <a href="https://github.com/preranadave" className="" target="_blank"><div
-                ref={elementRef}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                onMouseMove={handleMouseMove}
-                className="relative rounded-md overflow-hidden cursor-pointer "
-               
+              <a
+                href="https://github.com/preranadave"
+                className=""
+                target="_blank"
               >
-                <motion.img
-                  initial={{ x: "-120%", opacity: 0 }}
-                  animate={{ x: "0", opacity: 1 }}
-                  transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
-                  src={simpsonwebsite}
-                  alt=""
-                  className="md:h-[8.3vw] h-[37vw] "
-                />
-              </div>
+                <div
+                  ref={elementRef}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  onMouseMove={handleMouseMove}
+                  className="relative rounded-md overflow-hidden cursor-pointer "
+                >
+                  <motion.img
+                    initial={{ x: "-120%", opacity: 0 }}
+                    animate={{ x: "0", opacity: 1 }}
+                    transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
+                    src={simpsonwebsite}
+                    alt=""
+                    className="md:h-[8.3vw] h-[37vw] "
+                  />
+                </div>
               </a>
-              <div className="md:flex-col">
-                <div className="overflow-hidden  translate-x-2 translate-y-1 ">
+              <div className="md:flex-col justify-center">
+                <div className="overflow-hidden  translate-x-2 translate-y-2 ">
                   <motion.h1
                     initial={{ y: "-120%" }}
                     animate={{ y: "0" }}
@@ -111,17 +114,21 @@ const NewLandigUI = (props) => {
                     transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
                     className=" font-['Founders Grotesk'] uppercase font-medium tracking-tighter "
                   >
-                   <span className="md:block hidden text-[17vw]  md:text-[8vw]">Front-End</span> 
-                   
-                   <span className="md:hidden block text-[35vw]  md:text-[8vw]">UI</span> 
+                    <span className="md:block hidden text-[17vw]  md:text-[8vw] tracking-[-0.1em]">
+                      Front-End
+                    </span>
+
+                    <span className="md:hidden block text-[38vw] md:text-[8vw] tracking-tighter">
+                      UI
+                    </span>
                   </motion.h1>
                 </div>
               </div>
             </div>
-
+            {/* 
             <div className="md:flex lg:flex-row relative  md:items-start   sm:flex-col justify-center md:space-y-0 space-y-5  ">
               {" "}
-            </div>
+            </div> */}
 
             <div className="overflow-hidden flex items-center">
               <motion.p
@@ -132,7 +139,7 @@ const NewLandigUI = (props) => {
               >
                 Developer
               </motion.p>
-              <div className="overflow-hidden md:w-[23vw] md:h-[4vw] w-[22vw] h-[8vw] relative md:top-0 top-1 sm:top-0 left-4 md:left-8 rounded-md">
+              <div className="overflow-hidden md:w-[23vw] md:h-[4vw] w-[22vw] h-[9vw] relative md:top-0 top-1 sm:top-0 left-2 md:left-8 rounded-md">
                 <motion.div
                   initial={{ y: "-100%", opacity: 0 }}
                   animate={{ y: "0", opacity: 1 }}
@@ -185,13 +192,13 @@ const NewLandigUI = (props) => {
                 </span>
                 {/* <span className="text-center ">Download Resume</span> */}
               </motion.div>
-              <div className="relative overflow-hidden  w-6 h-6 px-1 py-1 rounded-full border-[1px] border-[#F1F1F1] ">
+              <div className="relative overflow-hidden  w-8 h-8 px-1 py-1 rounded-full border-[1px] border-[#F1F1F1] ">
                 <span className="absolute inset-0 flex items-center justify-center transform transition-transform duration-300 group-hover:translate-y-full">
-                  <IoMdDownload size={15} />
+                  <IoMdDownload size={16} />
                 </span>
                 {/* Second Text */}
                 <span className="absolute inset-0 flex items-center justify-center transform -translate-y-full transition-transform duration-300 group-hover:translate-y-0">
-                  <IoMdDownload size={15} />
+                  <IoMdDownload size={16} />
                 </span>
               </div>
             </motion.div>
