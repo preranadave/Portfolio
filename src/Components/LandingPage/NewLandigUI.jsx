@@ -57,7 +57,7 @@ const NewLandigUI = (props) => {
     <div>
       <section className="md:h-screen h-[120vw]  overflow-hidden">
         <div className="shape absolute md:w-[50rem] w-[20rem] rotate-[180deg] md:h-[30rem] h-[10rem] rounded-2xl top-0 right-0"></div>
-        <div className="shape absolute md:w-[25rem] w-[10rem] rotate-[80deg] md:h-[25rem] h-[10rem] rounded-2xl md:bottom-20 bottom-[100vw] left-0"></div>
+        <div className="shape absolute md:w-[25rem] w-[10rem] rotate-[80deg] md:h-[25rem] h-[10rem] rounded-2xl md:bottom-20 bottom-[130vw] left-0"></div>
         <section className="backdrop-blur-3xl md:w-full h-screen flex flex-col md:justify-center justify-start   items-center leading-none ">
           <div className="px-5 relative md:top-0 top-24">
             <div className="flex items-center gap-2">
@@ -139,7 +139,7 @@ const NewLandigUI = (props) => {
               >
                 Developer
               </motion.p>
-              <div className="overflow-hidden md:w-[23vw] md:h-[4vw] w-[22vw] h-[9vw] relative md:top-0 top-1 sm:top-0 left-2 md:left-8 rounded-md">
+              <div className="overflow-hidden md:w-[23vw] md:h-[4vw] w-[20vw] h-[8vw] relative md:top-0 top-1 sm:top-0 left-2 md:left-8 rounded-md">
                 <motion.div
                   initial={{ y: "-100%", opacity: 0 }}
                   animate={{ y: "0", opacity: 1 }}
@@ -170,7 +170,7 @@ const NewLandigUI = (props) => {
             </p> */}
           </div>
 
-          <div className="flex-col group space-y-7 md:space-y-2 md:flex lg:flex-row justify-between items-center md:translate-y-52 translate-y-52  px-5">
+          <div className="flex-col group space-y-7 md:space-y-2 md:flex lg:flex-row justify-between items-center md:translate-y-51 translate-y-32  px-5">
             <motion.div
               initial={{ y: "100%", opacity: 0 }}
               animate={{ y: "0", opacity: 1 }}
