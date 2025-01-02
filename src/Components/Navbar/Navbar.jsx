@@ -10,16 +10,16 @@ function Navbar() {
         initial={{ y: "-100%" }}
         animate={{ y: "0" }}
         transition={{ ease: [0.76, 0, 0.24, 1], duration: 1.2 }}
-        className="fixed z-[1000] md:w-full w-[100vw] px-2 pe-4 py-2 text-[#EDEDED] backdrop-blur-lg flex justify-between items-center  font-['Neue Montreal'] font-thin"
+        className="fixed top-0  z-[1000] md:w-full w-[100vw] px-2 pe-4 py-2 text-[#EDEDED] backdrop-blur-lg flex justify-between items-center  font-['Neue Montreal'] font-thin"
       >
-        <div className="logo font-bold text-3xl flex">
+        <div className="logo font-bold text-3xl flex items-center">
           {/* <span>P</span>
           <div className="mt-4 -translate-x-3">D</div> */}
           <motion.h1 className="font-['Founders Grotesk'] uppercase  md:text-[1vw] text-[2vw] ms-3 font-bold">
             Prerana Dave
           </motion.h1>
         </div>
-        <div className="links flex md:space-x-20 space-x-10 items-center ps-20 overflow-hidden">
+        <div className="links flex md:space-x-20 space-x-10  md:mt-0 mt-4 items-center ps-20 overflow-hidden">
           {["About", "Projects", "Contact"].map((item, index) => (
             <div className="group relative right-16 h-7 py-2">
               <Link
@@ -28,7 +28,7 @@ function Navbar() {
                 scroll={(el) =>
                   el.scrollIntoView({ behavior: "smooth", inline: "center" })
                 }
-                className={`md:text-[16px] text-[2vw] font-normal tracking-tight capitalize `}
+                className={`md:text-[16px] text-[2vw] font-normal tracking-tight capitalize px-2 `}
               >
                 <span className="transform  absolute inset-0 ">{item}</span>
                 {/* <span className="transform group-hover:-translate-y-full translate-y-0 absolute inset-0 transition-transform duration-500">
