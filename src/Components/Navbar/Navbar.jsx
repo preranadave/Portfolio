@@ -19,8 +19,8 @@ function Navbar() {
             Prerana Dave
           </motion.h1>
         </div>
-        <div className="links flex md:space-x-20 space-x-10 items-center overflow-hidden">
-          {["About", "About", "Projects", "Contact"].map((item, index) => (
+        <div className="links flex md:space-x-20 space-x-10 items-center ps-20 overflow-hidden">
+          {["About", "Projects", "Contact"].map((item, index) => (
             <div className="group relative right-16 h-7 py-2">
               <Link
                 smooth
@@ -30,14 +30,15 @@ function Navbar() {
                 }
                 className={`md:text-[16px] text-[2vw] font-normal tracking-tight capitalize `}
               >
-                <span className="transform group-hover:-translate-y-full translate-y-0 absolute inset-0 transition-transform duration-500">
+                <span className="transform  absolute inset-0 ">{item}</span>
+                {/* <span className="transform group-hover:-translate-y-full translate-y-0 absolute inset-0 transition-transform duration-500">
                   {item}
-                </span>
-                <div className="w-0 absolute top-6 transform  group-hover:w-14 transition-all duration-300 bg-white h-[1px]"></div>
+                </span> */}
+                <div className="w-0 absolute top-6 transform  group-hover:w-14 transition-all duration-300 rounded-sm bg-white h-[2px]"></div>
 
-                <span className="transform  group-hover:translate-y-0 group-hover:visible inset-0 translate-y-full absolute transition-transform duration-500">
+                {/* <span className="transform  group-hover:translate-y-0 group-hover:visible inset-0 translate-y-full absolute transition-transform duration-500">
                   {item}
-                </span>
+                </span> */}
               </Link>
             </div>
           ))}

@@ -9,9 +9,9 @@ function Projects() {
     <div className="w-full " id={"Projects"}>
       <div
         className="w-full border-zinc-700 "
-        data-scroll
-        data-scroll-section
-        data-scroll-speed=".1"
+        // data-scroll
+        // data-scroll-section
+        // data-scroll-speed=".1"
       >
         <motion.h1
           initial={{ opacity: 0, x: "-100%" }}

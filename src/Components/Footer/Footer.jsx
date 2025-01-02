@@ -1,7 +1,7 @@
 import React from "react";
 import ContactForm from "../Contact/ContactForm";
 import { motion } from "framer-motion";
-import hand from "../../assets/images/tumblr_mr2w11PxSc1rmzrqmo1_500.webp";
+import hand from "../../assets/images/Animation - 1735106410911.gif";
 
 function Footer() {
   return (
@@ -9,20 +9,17 @@ function Footer() {
       className="w-full relative  h-screen grid grid-cols-1 md:flex bg-[#0D0D0D] py-14 px-10"
       id={"Contact"}
     >
-      <div className="overflow-hidden hidden md:block  md:h-28 md:w-[16.2rem] w-[7rem] rounded-md absolute md:left-[28vw] md:top-[6vw] left-[14rem] top-[18vw]">
+      <div className="overflow-hidden hidden md:block  md:h-[10vw] md:w-[16.2rem] w-[7rem] rounded-md absolute md:left-[28vw] md:top-[6vw] left-[14rem] top-[18vw]">
         <motion.div
           initial={{ y: "-99%" }}
           whileInView={{ y: "0" }}
           transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.8 }}
           className=""
         >
-          <img src={hand} className="" />
+          <img src={hand} className="h-[10vw] -translate-y-10" />
         </motion.div>
       </div>
-      <div
-        className="md:w-1/2 h-full "
-
-      >
+      <div className="md:w-1/2 h-full ">
         <div className="md:flex-col md:items-start items-center h-full">
           <div className="overflow-y-hidden md:w-[25vw] px-1">
             <motion.h1
@@ -55,7 +52,7 @@ function Footer() {
             <a href="/">Email</a>
           </li>
         </ul> */}
-          <div className="overflow-hidden  md:hidden translate-y-4  rounded-md ">
+          <div className="overflow-hidden flex justify-center  md:hidden   rounded-md ">
             <motion.div
               initial={{ y: "-99%" }}
               whileInView={{ y: "0" }}
@@ -163,7 +160,7 @@ function Footer() {
         <ul className="list-style-none flex-col justify-center px-10 space-y-5 text-2xl  font-light ">
           <div className="overflow-y-hidden">
             <motion.li
-              className="font-['Neue Montreal'] "
+              className="font-['Neue Montreal'] group"
               initial={{ y: "90%" }}
               whileInView={{ y: "0" }}
               transition={{
@@ -178,11 +175,12 @@ function Footer() {
               >
                 LinkedIn
               </a>
+              <div className="w-0  transform  group-hover:w-20 transition-all duration-300 rounded-sm bg-white h-[2px]"></div>
             </motion.li>
           </div>
           <div className="overflow-y-hidden">
             <motion.li
-              className="font-['Neue Montreal'] "
+              className="font-['Neue Montreal'] group"
               initial={{ y: "90%" }}
               whileInView={{ y: "0" }}
               transition={{
@@ -194,11 +192,12 @@ function Footer() {
               <a href="https://github.com/preranadave" target="blank">
                 GitHub
               </a>
+              <div className="w-0  transform  group-hover:w-20 transition-all duration-300 rounded-sm bg-white h-[2px]"></div>
             </motion.li>
           </div>
           <div className="overflow-y-hidden">
             <motion.li
-              className="font-['Neue Montreal'] "
+              className="font-['Neue Montreal'] group"
               initial={{ y: "90%" }}
               whileInView={{ y: "0" }}
               transition={{
@@ -216,6 +215,7 @@ function Footer() {
               >
                 Email
               </a>
+              <div className="w-0  transform  group-hover:w-20 transition-all duration-300 rounded-sm bg-white h-[2px]"></div>
             </motion.li>
           </div>
         </ul>
