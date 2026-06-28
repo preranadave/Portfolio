@@ -1,0 +1,13 @@
+@import './styles/variables.css';
+@import './styles/global.css';
+@import './styles/Navbar.css';
+@import './styles/Hero.css';
+@import './styles/About.css';
+@import './styles/Experience.css';
+@import './styles/Skills.css';
+@import './styles/Projects.css';
+@import './styles/Contact.css';
+@import './styles/Footer.css';
+
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');

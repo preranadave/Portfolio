@@ -1,0 +1,256 @@
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero-section {
+  min-height: 100vh;
+  padding-top: var(--nav-h);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+/* Corner decorations */
+.hero-corner {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  pointer-events: none;
+  z-index: 2;
+}
+.hero-corner-tl {
+  top: calc(var(--nav-h) + 20px);
+  left: var(--pad-x);
+  border-top: 1px solid var(--border2);
+  border-left: 1px solid var(--border2);
+}
+.hero-corner-br {
+  bottom: 80px;
+  right: var(--pad-x);
+  border-bottom: 1px solid var(--border2);
+  border-right: 1px solid var(--border2);
+}
+
+/* Vertical guide lines */
+.hero-guide-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+  opacity: 0.4;
+  pointer-events: none;
+}
+.hero-guide-line-1 { left: 25%; }
+.hero-guide-line-2 { left: 50%; }
+.hero-guide-line-3 { left: 75%; }
+
+/* Main content area — grows to fill, pushes indicator down */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 100px; /* clears the scroll indicator */
+}
+
+.hero-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.hero-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5A9B5A;
+  animation: pulseGreen 2s infinite;
+}
+
+@keyframes pulseGreen {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(90, 155, 90, 0.4); }
+  50%       { box-shadow: 0 0 0 6px rgba(90, 155, 90, 0); }
+}
+
+.hero-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: right;
+}
+
+/* Name */
+.hero-name {
+  font-family: var(--ff-head);
+  font-size: 120px;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--text);
+  margin-bottom: 36px;
+}
+
+.hero-name-line {
+  display: block;
+  overflow: hidden;
+}
+
+/* Bottom row — roles | cta | desc */
+.hero-bottom {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
+  gap: 40px;
+}
+
+.hero-roles {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hero-role-item {
+  font-family: var(--ff-head);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text2);
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-role-item::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* CTA buttons — stacked vertically in center */
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-desc {
+  max-width: 300px;
+  text-align: right;
+}
+
+.hero-desc p {
+  font-size: 13px;
+  line-height: 21px;
+  color: var(--text2);
+}
+
+/* Typewriter text */
+.hero-typewriter-text {
+  font-family: var(--ff-head);
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: -0.01em;
+}
+
+/* Typewriter cursor */
+.typer-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--accent);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: cursorBlink 0.8s step-end infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Scroll indicator — sits at bottom, never overlaps content */
+.scroll-indicator {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.scroll-indicator-line {
+  width: 1px;
+  height: 36px;
+  background: var(--border2);
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-indicator-line::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: var(--accent);
+  animation: scrollLineAnim 1.4s ease-in-out infinite;
+}
+
+@keyframes scrollLineAnim { to { top: 200%; } }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1200px) {
+  .hero-name { font-size: 96px; }
+}
+
+@media (max-width: 992px) {
+  .hero-name { font-size: 72px; }
+  .hero-inner { padding-bottom: 90px; }
+  .hero-bottom {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .hero-desc { text-align: left; max-width: 100%; }
+  .hero-cta { flex-direction: row; align-items: flex-start; }
+  .hero-guide-line { display: none; }
+  .hero-corner-br { display: none; }
+}
+
+@media (max-width: 768px) {
+  .hero-name { font-size: 52px; }
+  .hero-inner { padding-bottom: 80px; }
+  .hero-top-bar { flex-direction: column; gap: 10px; }
+  .hero-meta { text-align: left; }
+  .hero-cta { flex-direction: column; }
+}
+
+@media (max-width: 576px) {
+  .hero-name { font-size: 40px; }
+  .hero-role-item { font-size: 14px; }
+}

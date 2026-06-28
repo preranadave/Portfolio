@@ -1,0 +1,39 @@
+/* ============================================================
+   CSS VARIABLES — Global Design Tokens
+   ============================================================ */
+:root {
+  /* Backgrounds */
+  --bg:        #F7F4EF;
+  --bg2:       #F0EDE6;
+  --bg3:       #EDE9E0;
+  --surface:   #E8E3D8;
+
+  /* Text */
+  --text:      #111111;
+  --text2:     #4A4540;
+  --text3:     #8A8479;
+
+  /* Accent */
+  --accent:    #B9916A;
+  --accent2:   #7C6954;
+  --accent3:   #D2B48C;
+
+  /* Borders */
+  --border:    #DDD7CD;
+  --border2:   #C8C1B4;
+
+  /* Typography */
+  --ff-head:   'Syne', system-ui, sans-serif;
+  --ff-body:   'Manrope', system-ui, sans-serif;
+  --ff-mono:   'JetBrains Mono', monospace;
+
+  /* Layout */
+  --max-w:     1280px;
+  --pad-x:     40px;
+  --nav-h:     72px;
+
+  /* Easing */
+  --ease:      cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-out:  cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
