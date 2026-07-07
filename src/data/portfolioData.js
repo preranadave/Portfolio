@@ -211,6 +211,6 @@ export const education = [
 
 export const techMarquee = [
   "React.js", "Shopify", "Tailwind CSS", "JavaScript", "HTML5", "CSS3",
-  "Figma", "Liquid", "WordPress", "Node.js", "GSAP", "Framer Motion",
-  "Git", "Vite", "Elementor", "jQuery", "TypeScript", "Next.js",
+  "Figma", "Liquid", "WordPress", "GSAP", "Framer Motion",
+  "Git", "Elementor", "jQuery"
 ];
